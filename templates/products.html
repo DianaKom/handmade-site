@@ -73,9 +73,14 @@
     <p>
       {{ "${:,.2f}".format(pro.price_usd) }}
     </p>
-    <p>
-      <button type="button" class="btn btn-info">Info</button>
+     <form name="test" method="post" action="/buy">
+       <input type="hidden" name="product_id" value="{{ pro.id }}" />
+    <p><b>Your email:</b><br>
+   <input type="text" name="email" size="40">
     </p>
+       <p><input type="submit" value="Buy it!">
+   <input type="reset" value="Reset"></p>
+ </form>
   </div>
 
 
