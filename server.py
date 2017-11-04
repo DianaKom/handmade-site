@@ -3,7 +3,7 @@ from email.message import EmailMessage
 from flask import Flask, send_from_directory, render_template, request
 from flask_admin import Admin
 
-from handmade_shop.db import db_session, Category, Product
+from db import db_session, Category, Product
 from flask_admin.contrib.sqla import ModelView
 
 
