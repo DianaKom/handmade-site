@@ -65,12 +65,11 @@ def buy():
     msg['To'] = 'dianakom@hotmail.com'
     msg['Subject'] = 'New customer'
     msg.set_content("""\
-    User: {} Product: {}
-    """.format(request.form['email'], request.form['product_id']))
-    #msg = "Hello! Thanks for shopping! We send EMS all around the world. Please write back with the address! HandMade Dolls"
+    User: {} Product: {} Quantity: {}
+    """.format(request.form['email'], request.form['product_id'], request.form['quantity']))
+
     server.send_message(msg)
-    #msg2 = 'User: {} Product: {}'.format(request.form['email'], request.form['product_id'])
-    #server.sendmail("diana.mixis@gmail.com", 'dianakom@hotmail.com', msg2)
+
     return 'User: {} Product: {}'.format(request.form['email'], request.form['product_id'])
 
 if __name__ == "__main__":
